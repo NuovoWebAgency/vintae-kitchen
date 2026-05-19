@@ -267,4 +267,6 @@ footer i {
 i {
   color: olive;
 }
- 
+body.modal-open {
+  padding-bottom: 0 !important;
+}
