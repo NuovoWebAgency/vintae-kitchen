@@ -154,3 +154,9 @@ body {
   font-weight: 600;
   color: #1a1a1a;
 }
+
+#book-table {
+  background-color: #2e7d32 !important;
+  color: white !important;
+  border: none !important;
+}
