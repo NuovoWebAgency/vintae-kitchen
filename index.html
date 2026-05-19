@@ -3,173 +3,241 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ViNTAE Kitchen Cape Town</title>
+  <title>Vintae-Kitchen-Cape-Town</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-  <h4 class="restaurant-name">ViNTAE KiTCHEN</h4>
+<h4 class="restaurant-name">ViNTAE KiTCHEN</h4>
 
-  <!-- CATEGORY BUTTONS -->
-  <div class="container mb-3 categories">
+<!-- CATEGORY BUTTONS -->
+<div class="container mb-3" id="categories">
 
-    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#startersModal">Starters</button>
-    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#mainsModal">Mains</button>
-    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dessertsModal">Desserts</button>
-    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#drinksModal">Drinks</button>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#startersmodal">Starters</button>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mainsmodal">Mains</button>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dessertsmodal">Desserts</button>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#drinksmodal">Drinks</button>
 
+</div>
+
+<!-- HERO -->
+<div class="container">
+  <div class="card">
+    <img src="fancy-restaurant.jpg" class="img-fluid">
+    <span class="ratings"><i class="fa-solid fa-star"></i>4.8</span>
   </div>
+</div>
 
-  <!-- HERO -->
-  <div class="container">
-    <div class="card hero-card">
-      <img src="fancy-restaurant.jpg" class="img-fluid" alt="restaurant">
-      <span class="ratings"><i class="fa-solid fa-star"></i> 4.8</span>
-    </div>
+<div class="container" id="subtitle">
+  <p>We serve flavour-packed dishes made by our head chef. Come on in.</p>
+</div>
 
-    <div class="status">
-      <span id="statusDot" class="dot"></span>
-      <span id="statusText">Checking...</span>
-    </div>
-  </div>
+<!-- ================= MODALS ================= -->
 
-  <!-- SUBTITLE -->
-  <div class="container" id="subtitle">
-    <p>We serve flavour-packed dishes made by our head chef. Come on in.</p>
-  </div>
+<!-- STARTERS -->
+<div class="modal fade" id="startersmodal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5>Starters</h5></div>
+      <div class="modal-body">
 
-  <!-- POPULAR -->
-  <div class="container" id="popular-dishes">
-    <p>Our New Cocktails</p>
-  </div>
+        <h6>Fat Greek Flatbread <span>90</span></h6>
+        <p>Flatbread, melted halloumi, tzatziki, red onion, tomato, olives</p>
 
-  <div class="container">
-    <div class="row g-2">
+        <h6>Chicken Wings <span>85</span></h6>
+        <p>Sticky or Southern fried or Crunchy peri-peri</p>
 
-      <div class="col-6">
-        <div class="item-card text-center">
-          <img src="trinh-minh-th-9cPdsa-_7PI-unsplash.jpg" class="img-fluid">
-          <p>Bloody Mary<br>75</p>
-        </div>
-      </div>
+        <h6>Chicken Livers <span>75</span></h6>
+        <p>Served with toasted ciabatta</p>
 
-      <div class="col-6">
-        <div class="item-card text-center">
-          <img src="emily-andreeva-hXg4gGjIfhw-unsplash.jpg" class="img-fluid">
-          <p>Gin Sour<br>85</p>
-        </div>
-      </div>
+        <h6>Calamari <span>115</span></h6>
+        <p>Grilled or Fried, seasoned with garlic</p>
 
-    </div>
-  </div>
+        <h6>Vegan Samoosas <span>105</span></h6>
+        <p>Spiced lentils, onion, spinach in pastry</p>
 
-  <!-- FOOTER -->
-  <footer class="container footer">
-    <div>&copy; 2026 ViNTAE KiTCHEN</div>
-    <div class="socials">
-      <i class="fa-brands fa-whatsapp"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-tiktok"></i>
-    </div>
-  </footer>
+        <h6>Soup of the Day <span>95</span></h6>
+        <p>Served with 2 slices toasted ciabatta</p>
 
-  <!-- FIXED BUTTON (ONLY BUTTON HERE) -->
-  <div class="fixed-bottom p-3">
-    <button class="btn btn-primary w-100 py-3 fs-4"
-      data-bs-toggle="modal"
-      data-bs-target="#bookingModal">
-      Reserve a table
-    </button>
-  </div>
+        <h6>Beef Carpaccio <span>90</span></h6>
+        <p>Chalmar beef sirloin, radish, spring onion, ponzu sauce</p>
 
-
-  <!-- ================= MODALS ================= -->
-
-  <!-- STARTERS -->
-  <div class="modal fade" id="startersModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">Starters</div>
-        <div class="modal-body">
-          <h6>Fat Greek Flatbread <span>90</span></h6>
-          <p>Flatbread, halloumi, tzatziki</p>
-        </div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- MAINS -->
-  <div class="modal fade" id="mainsModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">Main Courses</div>
-        <div class="modal-body"></div>
+<!-- MAINS -->
+<div class="modal fade" id="mainsmodal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header"><h5>Main Courses</h5></div>
+
+      <div class="modal-body">
+
+        <h5>Pasta Vibes</h5>
+
+        <h6>Prawn Linguine <span>225</span></h6>
+        <p>Pan-fried prawns, parmesan cream and basil</p>
+
+        <h6>Chicken and Broccoli <span>175</span></h6>
+        <p>Parmesan cream topped with shavings</p>
+
+        <h6>Beef Bolognese <span>195</span></h6>
+        <p>Beef strips, tomato sauce, herbs</p>
+
+        <h6>Chicken Alfredo <span>165</span></h6>
+        <p>Parmesan cream sauce</p>
+
+        <h6>Spaghetti Carbonara <span>185</span></h6>
+        <p>Creamy bacon, egg yolk, parmesan</p>
+
+        <h6>Creamy Mushroom Pasta <span>165</span></h6>
+        <p>Mushrooms in garlic cream sauce</p>
+
+        <h5>Classic Pizzas</h5>
+
+        <h6>Margherita <span>170</span></h6>
+        <p>Tomato, mozzarella, basil</p>
+
+        <h6>Chicken & Mushroom <span>145</span></h6>
+        <p>Chicken, mushroom, mozzarella</p>
+
+        <h6>Spicy Beef <span>155</span></h6>
+        <p>Beef mince, jalapeño, onion</p>
+
+        <h6>Vegan Veggie Supreme <span>135</span></h6>
+        <p>Mushroom, olives, sweetcorn, vegan cheese</p>
+
       </div>
     </div>
   </div>
+</div>
 
-  <!-- DESSERTS -->
-  <div class="modal fade" id="dessertsModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">Desserts</div>
-        <div class="modal-body"></div>
+<!-- DESSERTS -->
+<div class="modal fade" id="dessertsmodal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header"><h5>Desserts</h5></div>
+
+      <div class="modal-body">
+
+        <h6>Cheesecake Tart <span>75</span></h6>
+        <p>Pineapple salsa, raspberry meringue</p>
+
+        <h6>Chocolate Pavlova <span>125</span></h6>
+        <p>Dark chocolate, berries, cream</p>
+
+        <h6>Cheesecake <span>80</span></h6>
+        <p>Citrus, lemon curd</p>
+
+        <h6>Carrot Cake <span>85</span></h6>
+        <p>Spiced sponge, nuts, cinnamon</p>
+
+        <h6>Waffle Supreme <span>90</span></h6>
+        <p>Waffles, chocolate, fruit, cream</p>
+
+        <h6>Burnt Custard <span>105</span></h6>
+        <p>Crème brûlée, honeycomb</p>
+
+        <h6>Lemon Custard <span>115</span></h6>
+        <p>Coconut meringue, white chocolate crumble</p>
+
       </div>
     </div>
   </div>
+</div>
 
-  <!-- DRINKS -->
-  <div class="modal fade" id="drinksModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">Drinks</div>
-        <div class="modal-body"></div>
+<!-- DRINKS -->
+<div class="modal fade" id="drinksmodal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header"><h5>Drinks</h5></div>
+
+      <div class="modal-body">
+
+        <h6>Mojito <span>110</span></h6>
+        <p>Mint, lime, white rum</p>
+
+        <h6>Strawberry Daiquiri <span>95</span></h6>
+        <p>Rum, strawberries, lime</p>
+
+        <h6>Pina Colada <span>90</span></h6>
+        <p>Pineapple, coconut cream</p>
+
+        <h6>Sex on the Beach <span>125</span></h6>
+        <p>Vodka, orange, cranberry</p>
+
+        <h6>Margarita <span>85</span></h6>
+        <p>Tequila, triple sec, lime</p>
+
+        <h6>Long Island <span>90</span></h6>
+        <p>Five spirits, cola</p>
+
+        <h6>Cosmopolitan <span>85</span></h6>
+        <p>Vodka, cranberry, lime</p>
+
+        <h6>Bloody Mary <span>75</span></h6>
+        <p>Vodka, tomato mix</p>
+
       </div>
     </div>
   </div>
+</div>
 
-  <!-- BOOKING -->
-  <div class="modal fade" id="bookingModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">Table Reservation</div>
+<!-- FIXED BUTTON -->
+<div class="fixed-bottom p-3">
+  <button id="book-table"
+    class="btn w-100 py-3 fs-4"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop">
+    Reserve a table
+  </button>
+</div>
 
-        <div class="modal-body">
-          <input class="form-control mb-2" placeholder="Name">
-          <input type="date" class="form-control mb-2">
+<!-- BOOKING MODAL -->
+<div class="modal fade" id="staticBackdrop" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-          <select class="form-select mb-2">
-            <option>Time</option>
-            <option>18:00</option>
-            <option>19:00</option>
-          </select>
-
-          <select class="form-select mb-2">
-            <option>Guests</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3+</option>
-          </select>
-
-          <button class="btn btn-success w-100">Submit</button>
-        </div>
+      <div class="modal-header">
+        <h5>Table Reservation</h5>
       </div>
+
+      <div class="modal-body">
+        <input class="form-control mb-2" placeholder="Name">
+        <input type="date" class="form-control mb-2">
+
+        <select class="form-select mb-2">
+          <option>Time</option>
+          <option>18:00</option>
+          <option>19:00</option>
+        </select>
+
+        <select class="form-select mb-2">
+          <option>Guests</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3+</option>
+        </select>
+
+        <button class="btn btn-success w-100">Submit</button>
+      </div>
+
     </div>
   </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
